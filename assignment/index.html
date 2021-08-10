@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Google</title>
+    <style>
+     *{
+      box-sizing: border-box;
+      }
+     html{
+      font-family: arial,sans-serif;
+      }
+     header{
+     background: #fff;
+     }
+    .flex-container{
+      display: flex;
+     }
+    img.google {
+    height: 40px;
+    aspect-ratio: auto 92 / 40;
+    width: 92px;
+    float: left;
+    margin: 1%;
+    display: flex;
+    }
+    img.clear{
+      height: 24px;
+      width: 44px;
+    }
+
+.search-bar{
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  padding: 5px 4px 0 16px;
+  padding-left: 14px;
+  border-radius: 12px;
+  border: 2px;
+  box-shadow: 10px 10px 5px #f0eee9;
+  height:46px;
+  width: 719px;
+}
+.search-bar > p{
+  height:39px;
+  width: 533px;
+ }
+.clear{
+  padding: 0px 4px 0px 8px;
+  height:44px;
+  width:49px;
+  color: #5f6368;
+}
+.keyboard_voice{
+  padding: 0px 8px;
+  height:40px;
+  width:44px;
+  float:right;
+}
+.search{
+  padding: 0px 13px 0px 0px;
+  height:44px;
+  width:44px;
+  float:right;
+}
+.side-bar{
+  height:46px;
+  width: 719px;
+  float: right;
+  margin-right: -60%;
+  margin-top: -3%;
+  display: flex;
+  align-items:flex-end;
+  padding-left: 5%;
+}
+.settings{
+  float:right;
+  height:46px;
+  width:48px;
+  margin: 0px -14px 0px 0px;
+}
+.apps{
+  float:right;
+  height:46px;
+  width:48px;
+  margin: 0px -14px 0px 0px;
+}
+.name{
+  float:right;
+  height:40px;
+  width:40px;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 25px;
+  margin: 2%;
+  color: white;
+  background-color: purple;
+}
+
+.navbar {
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction:row ;
+  border-bottom: 1px solid #bfbfbb;
+  padding: 0.5% 10% 0%;
+}
+.nav-icon{
+  display: flex;
+  align-items: center;
+  margin:1%;
+  color: #5f6368;
+}
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  {
+    .bar{
+      height: 64px;
+      width: 360px;
+    }
+    .search-bar{
+     width:328px;
+     height:48px;
+   }
+   
+    img.google{
+    height: 150px;
+    width: 200px;
+    position: absolute;
+    left: 250px;
+    top:20px;
+    }
+    
+    .search-bar{
+      min-height:100px;
+      width:100%;
+      margin-top:25%;
+      padding:40px;
+  
+    }
+
+    .search{
+      padding: 10px;
+      font-size: 40px;
+    }
+    .search-bar > p{
+      height: 42px ;
+      width: 100%;
+      font-size: 35px;
+      padding: 2px;
+      margin: 2%;
+      
+    }
+
+    .side-bar .name{
+      border-radius: 40px;
+    position: absolute;
+    left: 600px;
+    top: 50px;
+    padding: 5%;
+    font-size: 35px;
+    min-height: 80px;
+    min-width: 80px;
+}
+    .navbar{
+      border-bottom: none;
+    }
+    .nav-icon{
+      margin-left: 20px;
+    margin-right: 20px;
+    padding: 3px;
+    font-size: 30px;
+    box-sizing: border-box;
+    }
+   .keyboard_voice{
+     padding: 10px;
+     font-size: 50px;
+   }
+   #All{
+     border-bottom: 1px solid #5f6368 ;
+   }
+
+    .clear,.settings,.apps,.search_2,.image,.video,.news,.shop,.more{
+      display: none;
+    }
+   
+
+}
+
+    </style>
+</head>
+<body>
+  <header class="flex-container">
+    <div class="bar" style="height: 43px;width: 1261px;">
+      <img  class="google" src="google.png" alt="Google">
+      <div class="search-bar">
+          <p>Search landing page</p>
+          <span><img  class="clear" src="clear_black_24dp.svg" alt="Clear"  style=" float:right ;border-right: 1px solid #bfbfbb" >
+          </span>
+          <span class="material-icons keyboard_voice">keyboard_voice</span>
+        <span class="material-icons search">search</span>  
+      </div>
+      <div class="side-bar">    
+        <span class="material-icons settings">settings</span> 
+        <span class="material-icons apps">apps</span> 
+        <span class="name" id="name">A</span>
+      </div>
+      
+      <div class="navbar">
+        <div class="nav-icon" id="All"><span class="material-icons icon search_2">search</span><p>All</p></div>
+        <div class="nav-icon"><span class="material-icons icon image">crop_original</span><p>Image</p></div>
+        <div class="nav-icon"><span class="material-icons icon news">article</span><p>News</p></div>
+        <div class="nav-icon"><span class="material-icons icon video">smart_display</span><p>Video</p></div>
+        <div class="nav-icon"><span class="material-icons icon shop">shopping_cart</span><p>Shopping</p></div>
+        <div class="nav-icon"><span class="material-icons icon more">more_vert</span><p>More</p></div>
+      </div>
+
+
+    </div>
+  </header> 
+</body>
+</html>
